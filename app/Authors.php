@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Authors extends Model
 {
-    //
+    public $timestamps = false;
+    protected $fillable = ['fio'];
 }

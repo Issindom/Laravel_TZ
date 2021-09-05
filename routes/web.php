@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,5 +12,8 @@
 |
 */
 
-Route::get('/', 'BooksController@index');
+Route::get('/books', [Controllers\BooksController::class, 'index']);
 
+Route::get('/books/{id}/delete', [Controllers\BooksController::class, 'delete']);
+Route::get('/authors', [Controllers\AuthorsController::class, 'index']);
+Route::get('/authors/{id}/delete', [Controllers\AuthorsController::class, 'delete']);
